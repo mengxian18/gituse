@@ -1,0 +1,22 @@
+1.若首次使用请配置你的用户名和邮箱
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+2.使用 cd 命令切换到你想要作为 Git 仓库的本地项目目录
+cd /path/to/your/project
+（切换盘D：）
+3.目录初始化
+git init
+4. 添加文件到暂存区
+添加单个文件：git add filename.txt
+添加多个文件：git add file1.txt file2.txt
+添加当前目录下的所有文件：git add .
+5.提交文件到本地仓库
+git commit -m "Initial commit"
+6.在远程代码托管平台创建仓库
+虽然本地仓库和远程仓库不需要同名，但在实际操作中，为了便于管理和识别，也可以将它们命名为相同或相似的名称。例如本地仓库叫my_project，远程仓库也叫my_project，这样在进行git push或git pull等操作时，更容易让开发者明确操作的是哪个项目。
+7. 关联本地仓库和远程仓库
+git remote add origin https://github.com/yourusername/your-repo.git
+8. 推送本地代码到远程仓库
+git push -u origin master
+-u 选项会将本地的 master 分支和远程仓库的 master 分支关联起来，以后再推送时，就可以直接使用 git push 命令。
+若你的远程仓库默认分支是 main，则使用 git push -u origin main
